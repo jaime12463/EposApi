@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using EposApi.Models;
+using EposApi.Until;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +18,7 @@ namespace EposApi
         public DatosClienteResponse CustomerData { get; set; }
 
         [JsonProperty("cajero")]
-        public Cajero Cajero { get; set; }
+        public Cashier Cajero { get; set; }
 
         [JsonProperty("plus")]
         public List<PlusResponse> Products { get; set; }

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using EposApi.Until;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace EposApi.Models
         public string DocumentType { get; set; }
 
         [JsonProperty("numero")]
-       
+        [JsonConverter(typeof(ParseStringConverter))]
         public long Number { get; set; }
 
         [JsonProperty("nombre")]
