@@ -18,7 +18,7 @@ namespace EposApi
         public CustomerResponse CustomerData { get; set; }
 
         [JsonProperty("cajero")]
-        public Cashier Cajero { get; set; }
+        public Cashier Cashier { get; set; }
 
         [JsonProperty("plus")]
         public List<ProductResponse> Products { get; set; }
@@ -27,10 +27,10 @@ namespace EposApi
         public List<DiscountResponse> Discounts { get; set; }
 
         [JsonProperty("ivas")]
-        public List<Iva> Taxes { get; set; }
+        public List<TaxResponse> Taxes { get; set; }
 
         [JsonProperty("finTicket")]
-        public FinTicket FinTicket { get; set; }
+        public FooterTicket FooterTicket { get; set; }
     }
 
 
@@ -103,32 +103,32 @@ namespace EposApi
     //    public long Subfamilia { get; set; }
     //}
 
-    public  class FinTicket
-    {
-        [JsonProperty("articulos")]
-        public long Articulos { get; set; }
+    //public  class FinTicket
+    //{
+    //    [JsonProperty("articulos")]
+    //    public long Articulos { get; set; }
 
-        [JsonProperty("montoTotal")]
-        public double MontoTotal { get; set; }
-    }
+    //    [JsonProperty("montoTotal")]
+    //    public double MontoTotal { get; set; }
+    //}
 
-    public  class Iva
-    {
-        [JsonProperty("monto")]
-        public double Monto { get; set; }
+    //public  class Iva
+    //{
+    //    [JsonProperty("monto")]
+    //    public double Monto { get; set; }
 
-        [JsonProperty("montoIva")]
-        public double MontoIva { get; set; }
+    //    [JsonProperty("montoIva")]
+    //    public double MontoIva { get; set; }
 
-        [JsonProperty("base")]
-        public double Base { get; set; }
+    //    [JsonProperty("base")]
+    //    public double Base { get; set; }
 
-        [JsonProperty("impInternos")]
-        public double ImpInternos { get; set; }
+    //    [JsonProperty("impInternos")]
+    //    public double ImpInternos { get; set; }
 
-        [JsonProperty("porcentaje")]
-        public double Porcentaje { get; set; }
-    }
+    //    [JsonProperty("porcentaje")]
+    //    public double Porcentaje { get; set; }
+    //}
 
     //public  class PlusResponse
     //{

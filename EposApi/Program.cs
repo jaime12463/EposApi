@@ -69,7 +69,7 @@ try
     Console.WriteLine("");
     string result = postResponse.Content.ReadAsStringAsync().Result;
 
-    var res = JsonConvert.DeserializeObject<RespuestaPreventa>(result);
+    var res = JsonConvert.DeserializeObject<PresaleResponse>(result);
 
     Console.WriteLine(JsonConvert.SerializeObject(res));
     Console.WriteLine("*******************************************************");
