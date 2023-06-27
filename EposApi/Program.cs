@@ -12,12 +12,12 @@ using System.Text.Json.Serialization;
 
 
 
-Receipt comprobante = new Receipt();
+ReceiptRequest comprobante = new ReceiptRequest();
 Cashier cajero = new Cashier();
-Discount descuento = new Discount();
-Customer cliente = new Customer();
+DiscountRequest descuento = new DiscountRequest();
+CustomerRequest cliente = new CustomerRequest();
 
-List<Product> productos = new List<Product>();
+List<ProductRequest> productos = new List<ProductRequest>();
 
 
 cajero.Name = "Cajero 1";
@@ -37,9 +37,9 @@ cliente.Province = "CABA";
 cliente.Locality = "Villa del Parque";
 cliente.ResponsibleForIVA = "ConsFinal";
 
-productos.Add(new Product("779279800773", 5));
-productos.Add(new Product("779089500099", 2));
-productos.Add(new Product("36", 1));
+productos.Add(new ProductRequest("779279800773", 5));
+productos.Add(new ProductRequest("779089500099", 2));
+productos.Add(new ProductRequest("36", 1));
 
 
 
@@ -47,21 +47,16 @@ string api = "http://10.0.2.62:8081/PreVenta";
 
 Uri u = new Uri(api);
 
-Presale pre = new Presale(comprobante, cajero, descuento, cliente, productos);
+PresaleRequest pre = new PresaleRequest(comprobante, cajero, descuento, cliente, productos);
 
 string json = JsonConvert.SerializeObject(pre);
 
 Console.WriteLine(json);
 var httpContent = new StringContent(json, Encoding.UTF8, "application/json");
-//httpContent.Headers.ContentType=new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-//httpContent.Headers.Remove("Date");
+
 HttpClient httpClient = new HttpClient  {
                 Timeout = new TimeSpan(0, 0, 60)
             };
-//httpClient.DefaultRequestHeaders.Accept.Clear();
-//httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-//httpClient.DefaultRequestHeaders.
-//var postResponse = await httpClient.PostAsync(u, httpContent);
 
 RespuestaPreventa respuesta = new RespuestaPreventa();
 

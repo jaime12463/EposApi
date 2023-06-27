@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EposApi.Models
 {
-    public  class Discount
+    public  class DiscountRequest
     {
         [JsonProperty("descripcion")]
         public string Description { get; set; }

@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace EposApi.Models
 {
-    public  class Product
+    public  class ProductRequest
     {
-        public Product(string productCode , long quantity)
+        public ProductRequest(string productCode , long quantity)
         {
             ProductCode = productCode;
             Quantity = quantity;

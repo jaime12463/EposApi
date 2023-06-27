@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace EposApi.Models
 {
-    public  class Presale
+    public  class PresaleRequest
     {
-        public Presale(Receipt receipt, Cashier cashier, Discount discounts, Customer customer, List<Product> products)
+        public PresaleRequest(ReceiptRequest receipt, Cashier cashier, DiscountRequest discounts, CustomerRequest customer, List<ProductRequest> products)
         {
-            Discounts = new List<Discount>();
+            Discounts = new List<DiscountRequest>();
             Receipt = receipt;
             Cashier = cashier;
             Discounts.Add(discounts);
@@ -20,18 +20,18 @@ namespace EposApi.Models
         }
 
         [JsonProperty("comprobante")]
-        public Receipt Receipt { get; set; }
+        public ReceiptRequest Receipt { get; set; }
 
         [JsonProperty("cajero")]
         public Cashier Cashier { get; set; }
 
         [JsonProperty("descuentos")]
-        public List<Discount> Discounts { get; set; }
+        public List<DiscountRequest> Discounts { get; set; }
 
         [JsonProperty("datosCliente")]
-        public Customer Customer { get; set; }
+        public CustomerRequest Customer { get; set; }
 
         [JsonProperty("plus")]
-        public List<Product> Products { get; set; }
+        public List<ProductRequest> Products { get; set; }
     }
 }

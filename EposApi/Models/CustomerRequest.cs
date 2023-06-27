@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EposApi.Models
 {
-    public  class Customer
+    public  class CustomerRequest
     {
         [JsonProperty("tipoDocumento")]
         public string DocumentType { get; set; }
