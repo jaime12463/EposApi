@@ -11,35 +11,6 @@ using System.Text.Json.Serialization;
 
 
 
-//Comprobante comprobante = new Comprobante();
-//Cajero cajero = new Cajero();
-//Descuento descuento = new Descuento();
-//DatosCliente cliente = new DatosCliente();
-
-//List<Plus> productos = new List<Plus>(); 
-
-
-//cajero.Nombre = "Cajero 1";
-//cajero.Legajo = 1234;
-
-//comprobante.Tipo = "Factura";
-
-//descuento.Subfamilia = 99; // Checar de donde viene la familia de descuentos 
-//descuento.Descripcion = "Descuento Test Hasar ";
-//descuento.Porcentaje = (long)-10.00;
-
-//cliente.TipoDocumento = "DNI";
-//cliente.Direccion = "1Florencio Terrada 2076";
-//cliente.Nombre = "fABIAN BARCA ";
-//cliente.Numero = 223872378;
-//cliente.Provincia = "CABA";
-//cliente.Localidad = "Villa del Parque";
-//cliente.RespAnteIva = "ConsFinal";
-
-//productos.Add(new Plus("779279800773", 5));
-//productos.Add(new Plus("779089500099", 2));
-//productos.Add(new Plus("36", 1));
-
 
 Receipt comprobante = new Receipt();
 Cashier cajero = new Cashier();
