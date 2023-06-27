@@ -13,19 +13,19 @@ namespace EposApi
         public ComprobanteResponse Comprobante { get; set; }
 
         [JsonProperty("datosCliente")]
-        public DatosClienteResponse DatosCliente { get; set; }
+        public DatosClienteResponse CustomerData { get; set; }
 
         [JsonProperty("cajero")]
         public Cajero Cajero { get; set; }
 
         [JsonProperty("plus")]
-        public PlusResponse[] Plus { get; set; }
+        public List<PlusResponse> Products { get; set; }
 
         [JsonProperty("descuentos")]
-        public DescuentoResponse[] Descuentos { get; set; }
+        public List<DescuentoResponse> Discounts { get; set; }
 
         [JsonProperty("ivas")]
-        public Iva[] Ivas { get; set; }
+        public List<Iva> Taxes { get; set; }
 
         [JsonProperty("finTicket")]
         public FinTicket FinTicket { get; set; }
