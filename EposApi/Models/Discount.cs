@@ -13,7 +13,7 @@ namespace EposApi.Models
         public string Description { get; set; }
 
         [JsonProperty("porcentaje")]
-        public long Porcentage { get; set; }
+        public long Percentage { get; set; }
 
         [JsonProperty("subfamilia")]
         public long SubFamily { get; set; }
