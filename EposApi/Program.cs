@@ -1,6 +1,7 @@
 ﻿
 using EposApi;
 using EposApi.Models;
+using EposApi.Util;
 using Newtonsoft.Json;
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
@@ -43,9 +44,8 @@ productos.Add(new ProductRequest("36", 1));
 
 
 
-string api = "http://10.0.2.62:8081/PreVenta";
 
-Uri u = new Uri(api);
+Uri u = new Uri(API.Presale);
 
 PresaleRequest pre = new PresaleRequest(comprobante, cajero, descuento, cliente, productos);
 
