@@ -18,6 +18,7 @@ namespace EposApi.Test
 
             ReceiptRequest comprobante = new ReceiptRequest();
             Cashier cajero = new Cashier();
+            List<DiscountRequest> descuentos = new List<DiscountRequest>();
             DiscountRequest descuento = new DiscountRequest();
             CustomerRequest cliente = new CustomerRequest();
 
@@ -45,12 +46,14 @@ namespace EposApi.Test
             productos.Add(new ProductRequest("779089500099", 2));
             productos.Add(new ProductRequest("36", 1));
 
+            descuentos.Add(descuento);
+
 
 
 
             Uri u = new Uri(API.Presale);
 
-            PresaleRequest pre = new PresaleRequest(comprobante, cajero, descuento, cliente, productos);
+            PresaleRequest pre = new PresaleRequest(comprobante, cajero, descuentos, cliente, productos);
 
             string json = JsonConvert.SerializeObject(pre);
 

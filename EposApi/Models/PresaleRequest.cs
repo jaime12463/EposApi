@@ -9,12 +9,12 @@ namespace EposApi.Models
 {
     public  class PresaleRequest
     {
-        public PresaleRequest(ReceiptRequest receipt, Cashier cashier, DiscountRequest discounts, CustomerRequest customer, List<ProductRequest> products)
+        public PresaleRequest(ReceiptRequest receipt, Cashier cashier, List<DiscountRequest> discounts, CustomerRequest customer, List<ProductRequest> products)
         {
             Discounts = new List<DiscountRequest>();
             Receipt = receipt;
             Cashier = cashier;
-            Discounts.Add(discounts);
+            Discounts=discounts;
             Customer = customer;
             Products = products;
         }
