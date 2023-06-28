@@ -7,11 +7,15 @@ using System.Threading.Tasks;
 
 namespace EposApi.Models
 {
-    public class ProductResponse : ProductRequest
+    public class ProductResponse 
     {
-        public  ProductResponse(string productCode, long quantity) : base(productCode, quantity)
-        {
-        }
+       
+
+        [JsonProperty("codigo")]
+        public string ProductCode { get; set; }
+
+        [JsonProperty("cantidad")]
+        public long Quantity { get; set; }
 
         [JsonProperty("descripcion")]
         public string Description { get; set; }

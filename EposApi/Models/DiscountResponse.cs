@@ -7,8 +7,16 @@ using System.Threading.Tasks;
 
 namespace EposApi.Models
 {
-    public  class DiscountResponse: DiscountRequest
+    public  class DiscountResponse
     {
+        [JsonProperty("descripcion")]
+        public string Description { get; set; }
+
+        [JsonProperty("porcentaje")]
+        public long Percentage { get; set; }
+
+        [JsonProperty("subfamilia")]
+        public long SubFamily { get; set; }
         [JsonProperty("importe")]
         public long SubAmount { get; set; }
 

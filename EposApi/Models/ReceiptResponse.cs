@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace EposApi.Models
 {
-    public  class ReceiptResponse:ReceiptRequest
+    public  class ReceiptResponse
     {
+        [JsonProperty("tipo")]
+        public string Type { get; set; }
         [JsonProperty("letra")]
         public string Letter { get; set; }
 
